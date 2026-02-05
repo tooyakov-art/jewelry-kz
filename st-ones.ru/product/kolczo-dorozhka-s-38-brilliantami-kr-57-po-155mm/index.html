@@ -2189,8 +2189,9 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
   </div>
 </div>
 <script>
-(function(){
+document.addEventListener('DOMContentLoaded', function(){
   var modal = document.getElementById('wa-modal');
+  if(!modal) return;
   var closeBtn = modal.querySelector('.wa-modal-close');
   var submitBtn = document.getElementById('wa-submit');
   var phoneInput = document.getElementById('wa-phone');
@@ -2202,6 +2203,7 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
   document.querySelectorAll('.awooc-custom-order-button, .awooc-button-js').forEach(function(btn){
     btn.addEventListener('click', function(e){
       e.preventDefault();
+      e.stopPropagation();
       var container = btn.closest('.product, .summary, .productcard-section');
       if(!container) container = document.body;
       var titleEl = container.querySelector('.product_title, .woocommerce-loop-product__title, h1');
@@ -2219,6 +2221,7 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
   closeBtn.addEventListener('click', function(){ modal.classList.remove('active'); });
   modal.addEventListener('click', function(e){ if(e.target === modal) modal.classList.remove('active'); });
+});
 
   submitBtn.addEventListener('click', function(){
     var phone = phoneInput.value.trim();
