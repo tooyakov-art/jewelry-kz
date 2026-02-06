@@ -518,10 +518,39 @@ img[loading="lazy"][src] {
     opacity: 1;
 }
 
-/* ---------- PAGINATION ---------- */
+/* ---------- DISABLE INFINITE SCROLL, SHOW PAGINATION ---------- */
+.yith-infs-loader,
+.yith-infs-icon,
+.yith-infs-button { display: none !important; }
+
+.woocommerce-pagination {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    text-align: center;
+    padding: 30px 0;
+    margin: 20px 0;
+}
+.woocommerce-pagination ul {
+    display: flex !important;
+    justify-content: center;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+}
 .woocommerce-pagination .page-numbers,
 .pagination .page-numbers {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 42px;
     border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+    font-size: 15px;
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 .woocommerce-pagination .page-numbers:hover,
