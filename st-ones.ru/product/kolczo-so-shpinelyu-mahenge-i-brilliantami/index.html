@@ -1401,97 +1401,7 @@ window.onload = function () {
 </main>
 
 	
-<script>
-    jQuery(document).ready(function($) {
-        // Открытие попапа при клике на кнопку
-        $('.open-popup').click(function() {
-            var sku = $(this).data('sku');
-            var title = $(this).data('title');
-            var link = $(this).data('link'); // Получаем ссылку на товар
 
-            $('#popup-sku').text(sku);        // Устанавливаем артикул
-            $('#popup-title').text(title);    // Устанавливаем название товара
-            $('#popup-link').attr('href', link); // Устанавливаем ссылку на товар
-
-            // Установка значений скрытых полей формы Contact Form 7
-            $('input[name="product_sku"]').val(sku);
-            $('input[name="product_title"]').val(title);
-            $('input[name="product_link"]').val(link); // Передаем ссылку в скрытое поле
-
-            $('#popup-form').fadeIn(); // Открытие попапа
-        });
-
-        // Закрытие попапа
-        $('.close-popup').click(function() {
-            $('#popup-form').fadeOut();
-        });
-
-        // Закрытие попапа при клике вне контента
-        $(window).click(function(event) {
-            if ($(event.target).is('#popup-form')) {
-                $('#popup-form').fadeOut();
-            }
-        });
-    });
-    
-    // ===========================================
-    document.addEventListener('DOMContentLoaded', function () {
-        const favorit = document.querySelectorAll('.productcard-section__wish button.alg-wc-wl-toggle-btn');
-    
-        favorit.forEach(button => {
-          button.setAttribute('onclick', "ym(99323634,'reachGoal','click-dobavit-spisok-jelaniy')");
-        });
-    });
-    
-    document.addEventListener('DOMContentLoaded', function () {
-        const awoocButton = document.querySelectorAll('.productcard-section__box-button button.productcard-section__button-one-click');
-    
-        awoocButton.forEach(button => {
-          button.setAttribute('onclick', "ym(99323634,'reachGoal','click-kupit-v-1-click')");
-        });
-    });
-    
-    document.addEventListener('DOMContentLoaded', function () {
-        const otpravkaVclick = document.querySelectorAll('.awooc-popup-inner input.wpcf7-submit');
-    
-        otpravkaVclick.forEach(input => {
-          input.setAttribute('onclick', "ym(99323634,'reachGoal','otpravka-kupit-v1click')");
-        });
-    });
-    
-    document.addEventListener('DOMContentLoaded', function () {
-        const clickNameknut = document.querySelectorAll('.productcard-section__two-button a.open-popup');
-    
-        clickNameknut.forEach(a => {
-          a.setAttribute('onclick', "ym(99323634,'reachGoal','click-nameknut')");
-        });
-    });
-    
-    document.addEventListener('DOMContentLoaded', function () {
-        const otpravkaNamek = document.querySelectorAll('#popup-form input.wpcf7-submit');
-    
-        otpravkaNamek.forEach(input => {
-          input.setAttribute('onclick', "ym(99323634,'reachGoal','otpravka-namek')");
-        });
-    });
-    
-    document.addEventListener('DOMContentLoaded', function () {
-        const clickPredlojenie = document.querySelectorAll('.productcard-section__two-button a.open-popup-2');
-    
-        clickPredlojenie.forEach(a => {
-          a.setAttribute('onclick', "ym(99323634,'reachGoal','click-predlojenie')");
-        });
-    });
-    
-    document.addEventListener('DOMContentLoaded', function () {
-        const otpravkaPredlojenie = document.querySelectorAll('#popup-form-2 input.wpcf7-submit');
-    
-        otpravkaPredlojenie.forEach(input => {
-          input.setAttribute('onclick', "ym(99323634,'reachGoal','otpravka-predlojenie')");
-        });
-    });
-    // =============================================
-</script>
 
 
 
@@ -1644,66 +1554,10 @@ window.onload = function () {
 		</footer>
 	</div> 
 	
-	<!-- Попап форма -->
-    <div id="popup-form-2" class="popup-form" style="display:none;">
-        <div class="popup-content">
-            <div class="popup-form__title">
-                Персональная консультация
-            </div>
-            <div class="popup-form-2__subtext">
-                Наши специалисты свяжутся с Вами, чтобы предоставить профессиональную консультацию, помочь с выбором камней и украшений, а также ответить на все вопросы о характеристиках и процессе покупки.
-            </div>
-            <span class="close-popup">&times;</span>
-            <h2 id="popup-title-2"></h2>
-            <p class="popup-sku">Артикул: <span id="popup-sku"></span></p>
-            <p class="popup-link">Ссылка на товар: <a href="#" id="popup-link-2" target="_blank">Перейти к товару</a></p>
-            
-
-        </div>
-    </div>
+	
     
-<script>
-    jQuery(document).ready(function($) {
-        // Открытие попапа при клике на кнопку
-        $('.open-popup-2').click(function() {
-            var sku = $(this).data('sku');
-            var title = $(this).data('title');
-            var link = $(this).data('link'); // Получаем ссылку на товар
-
-            $('#popup-sku-2').text(sku);        // Устанавливаем артикул
-            $('#popup-title-2').text(title);    // Устанавливаем название товара
-            $('#popup-link-2').attr('href', link); // Устанавливаем ссылку на товар
-
-            // Установка значений скрытых полей формы Contact Form 7
-            $('input[name="product_sku"]').val(sku);
-            $('input[name="product_title"]').val(title);
-            $('input[name="product_link"]').val(link); // Передаем ссылку в скрытое поле
-
-            $('#popup-form-2').fadeIn(); // Открытие попапа
-        });
-
-        // Закрытие попапа
-        $('.close-popup').click(function() {
-            $('#popup-form-2').fadeOut();
-        });
-
-        // Закрытие попапа при клике вне контента
-        $(window).click(function(event) {
-            if ($(event.target).is('#popup-form-2')) {
-                $('#popup-form-2').fadeOut();
-            }
-        });
-    });
-</script>
-<script>
-    document.addEventListener('click', (event) => {
-    if (event.target.classList.contains('wp-element-button')) {
-        ym(99323634, 'reachGoal', 'otpravka-kupit-v1click');
-    }
-});
 
 
-</script>
 
 
 			<script>
