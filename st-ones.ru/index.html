@@ -383,6 +383,129 @@ form.footer__menu{
 <link rel='stylesheet' id='wc-blocks-style-css' href='/jewelry-kz/st-ones.ru/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css@ver=wc-10.3.7.css' type='text/css' media='all' />
 
 <link rel="stylesheet" href="/jewelry-kz/st-ones.ru/wp-content/themes/st-ones/assets/css/design-fixes.css" type="text/css" media="all" />
+<style>
+/* Decorative card with corner elements */
+.feedback-form__card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 60px 40px;
+    margin: 40px auto;
+    max-width: 600px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+}
+
+.card-corner {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #CCAF8D;
+}
+
+.corner-top-left {
+    top: 20px;
+    left: 20px;
+    border-right: none;
+    border-bottom: none;
+    border-top-left-radius: 8px;
+}
+
+.corner-top-right {
+    top: 20px;
+    right: 20px;
+    border-left: none;
+    border-bottom: none;
+    border-top-right-radius: 8px;
+}
+
+.corner-bottom-left {
+    bottom: 20px;
+    left: 20px;
+    border-right: none;
+    border-top: none;
+    border-bottom-left-radius: 8px;
+}
+
+.corner-bottom-right {
+    bottom: 20px;
+    right: 20px;
+    border-left: none;
+    border-top: none;
+    border-bottom-right-radius: 8px;
+}
+
+/* Add decorative elements to corners */
+.corner-top-left::before,
+.corner-top-right::before,
+.corner-bottom-left::before,
+.corner-bottom-right::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #CCAF8D;
+    border-radius: 50%;
+}
+
+.corner-top-left::before {
+    top: -12px;
+    left: -12px;
+}
+
+.corner-top-right::before {
+    top: -12px;
+    right: -12px;
+}
+
+.corner-bottom-left::before {
+    bottom: -12px;
+    left: -12px;
+}
+
+.corner-bottom-right::before {
+    bottom: -12px;
+    right: -12px;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Move form inside the card */
+.feedback-form .wpcf7 {
+    position: relative;
+    z-index: 3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .feedback-form__card {
+        margin: 20px;
+        padding: 40px 20px;
+        min-height: 300px;
+    }
+    
+    .card-corner {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .corner-top-left::before,
+    .corner-top-right::before,
+    .corner-bottom-left::before,
+    .corner-bottom-right::before {
+        width: 15px;
+        height: 15px;
+    }
+}
+</style>
 </head>
 <body class="home wp-singular page-template-default page page-id-82 wp-theme-st-ones theme-st-ones woocommerce-no-js">
 
@@ -1981,25 +2104,29 @@ document.addEventListener('DOMContentLoaded', () => {
 </section>
 			<section class="feedback-form">
     <div class="__container container">
-        <div class="feedback-form__title title-section">
+        <div class="feedback-form__title title-section" style="display: none;">
             Форма обратной связи
         </div>
-        <div class="feedback-form__subtitle">
-            Если у вас остались вопросы, вы можете оставить заявку и наш менеджер свяжется с вами
+        <div class="feedback-form__card">
+            <div class="card-corner corner-top-left"></div>
+            <div class="card-corner corner-top-right"></div>
+            <div class="card-corner corner-bottom-left"></div>
+            <div class="card-corner corner-bottom-right"></div>
+            <div class="card-content">
+                <div class="wpcf7 no-js" id="wpcf7-f862-o1" lang="ru-RU" dir="ltr" data-wpcf7-id="862">
+                <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+                <form action="/#wpcf7-f862-o1" method="post" class="wpcf7-form init" aria-label="Контактная форма" novalidate="novalidate" data-status="init">
+                <fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="862" /><input type="hidden" name="_wpcf7_version" value="6.1.3" /><input type="hidden" name="_wpcf7_locale" value="ru_RU" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f862-o1" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                </fieldset>
+                <p><span class="wpcf7-form-control-wrap" data-name="text-885"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-block__input" aria-required="true" aria-invalid="false" placeholder="Имя" value="" type="text" name="text-885" /></span><br />
+                <span class="wpcf7-form-control-wrap mask-917"><input type="text" value="" name="mask-917" class="wpcf7-form-control wpcf7-mask wpcf7-validates-as-required wpcf7mf-mask form-block__input" size="40" aria-required="1" aria-invalid="" placeholder="Телефон" data-mask="+7(___)___-__-__" /></span><br />
+                <span class="wpcf7-form-control-wrap" data-name="acceptance-19"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-19" value="1" aria-invalid="false" /><span class="wpcf7-list-item-label">Я соглашаюсь с<a href="/jewelry-kz/st-ones.ru/privacy-policy/" class="link-politic"> политикой обработки персональных данных</a></span></label></span></span></span><br />
+                <input class="wpcf7-form-control wpcf7-submit has-spinner form-block__button" type="submit" value="Отправить" />
+                </p><div class="wpcf7-response-output" aria-hidden="true"></div>
+                </form>
+                </div>
+            </div>
         </div>
-
-<div class="wpcf7 no-js" id="wpcf7-f862-o1" lang="ru-RU" dir="ltr" data-wpcf7-id="862">
-<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-<form action="/#wpcf7-f862-o1" method="post" class="wpcf7-form init" aria-label="Контактная форма" novalidate="novalidate" data-status="init">
-<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="862" /><input type="hidden" name="_wpcf7_version" value="6.1.3" /><input type="hidden" name="_wpcf7_locale" value="ru_RU" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f862-o1" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-</fieldset>
-<p><span class="wpcf7-form-control-wrap" data-name="text-885"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-block__input" aria-required="true" aria-invalid="false" placeholder="Имя" value="" type="text" name="text-885" /></span><br />
-<span class="wpcf7-form-control-wrap mask-917"><input type="text" value="" name="mask-917" class="wpcf7-form-control wpcf7-mask wpcf7-validates-as-required wpcf7mf-mask form-block__input" size="40" aria-required="1" aria-invalid="" placeholder="Телефон" data-mask="+7(___)___-__-__" /></span><br />
-<span class="wpcf7-form-control-wrap" data-name="acceptance-19"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-19" value="1" aria-invalid="false" /><span class="wpcf7-list-item-label">Я соглашаюсь с<a href="/jewelry-kz/st-ones.ru/privacy-policy/" class="link-politic"> политикой обработки персональных данных</a></span></label></span></span></span><br />
-<input class="wpcf7-form-control wpcf7-submit has-spinner form-block__button" type="submit" value="Отправить" />
-</p><div class="wpcf7-response-output" aria-hidden="true"></div>
-</form>
-</div>
     </div>
 </section>
 
