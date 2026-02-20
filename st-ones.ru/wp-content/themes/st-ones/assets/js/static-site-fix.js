@@ -33,15 +33,18 @@ document.addEventListener('DOMContentLoaded', function() {
             catFilter.appendChild(opt);
         });
 
-        catFilter.addEventListener('change', function() {
+        // Use capture phase to run before berocket's AJAX handler
+        catFilter.addEventListener('change', function(e) {
+            e.stopImmediatePropagation();
+            e.preventDefault();
             var selected = this.options[this.selectedIndex];
             var name = selected.getAttribute('data-name');
             if (name && categoryMap[name]) {
-                window.location.href = categoryMap[name];
+                window.location.assign(categoryMap[name]);
             } else if (!name) {
-                window.location.href = '/jewelry-kz/st-ones.ru/shop/';
+                window.location.assign('/jewelry-kz/st-ones.ru/shop/');
             }
-        });
+        }, true);
     }
 
     // Hide stone, metal filters (require WordPress backend)
