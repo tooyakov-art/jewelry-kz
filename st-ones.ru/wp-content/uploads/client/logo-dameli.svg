@@ -1,0 +1,11 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" role="img" aria-label="Dameli Maison">
+  <rect width="960" height="340" fill="none"/>
+  <g transform="translate(445 20)">
+    <path d="M36 2l34 17v29c0 20-14 37-34 45C16 85 2 68 2 48V19z" fill="none" stroke="#B79A6B" stroke-width="3.5"/>
+    <path d="M36 11l25 12v23c0 15-10 26-25 33-15-7-25-18-25-33V23z" fill="none" stroke="#B79A6B" stroke-width="2.2"/>
+    <text x="36" y="58" text-anchor="middle" fill="#B79A6B" font-size="38" font-family="Cormorant Garamond, Times New Roman, serif">D</text>
+  </g>
+  <text x="480" y="165" text-anchor="middle" fill="#B79A6B" font-size="96" font-family="Cormorant Garamond, Times New Roman, serif" letter-spacing="1">Dameli</text>
+  <text x="480" y="232" text-anchor="middle" fill="#B79A6B" font-size="48" font-family="Montserrat, Arial, sans-serif" letter-spacing="10">MAISON</text>
+  <text x="480" y="287" text-anchor="middle" fill="#B79A6B" font-size="26" font-family="Montserrat, Arial, sans-serif" letter-spacing="6">INSPIRED BY PARIS</text>
+</svg>

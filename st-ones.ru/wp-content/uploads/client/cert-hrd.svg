@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 220" role="img" aria-label="HRD certification">
+  <rect width="780" height="220" rx="16" fill="#FFFFFF"/>
+  <g transform="translate(38 28)">
+    <path d="M70 0L80 58L140 70L80 82L70 140L60 82L0 70L60 58Z" fill="#3AA1D8"/>
+  </g>
+  <text x="220" y="142" font-size="128" font-family="Georgia, serif" fill="#194F84" letter-spacing="4">HRD</text>
+</svg>

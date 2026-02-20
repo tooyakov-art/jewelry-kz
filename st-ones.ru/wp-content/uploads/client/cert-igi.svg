@@ -1,0 +1,9 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 220" role="img" aria-label="IGI certification">
+  <rect width="780" height="220" rx="16" fill="#FFFFFF"/>
+  <g transform="translate(34 34)">
+    <circle cx="76" cy="76" r="66" fill="none" stroke="#AAA39A" stroke-width="10"/>
+    <circle cx="76" cy="76" r="36" fill="none" stroke="#AAA39A" stroke-width="6"/>
+    <path d="M44 76h64M76 44v64" stroke="#AAA39A" stroke-width="5"/>
+  </g>
+  <text x="220" y="142" font-size="130" font-family="Arial, sans-serif" font-weight="700" fill="#101010" letter-spacing="6">IGI</text>
+</svg>

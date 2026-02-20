@@ -1,0 +1,10 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 220" role="img" aria-label="GIA certification">
+  <rect width="780" height="220" rx="16" fill="#FFFFFF"/>
+  <g transform="translate(32 26)">
+    <circle cx="84" cy="84" r="78" fill="none" stroke="#C7A55F" stroke-width="6"/>
+    <circle cx="84" cy="84" r="58" fill="none" stroke="#C7A55F" stroke-width="4"/>
+    <text x="84" y="76" text-anchor="middle" font-size="26" font-family="Georgia, serif" fill="#8F6E2D">GIA</text>
+    <text x="84" y="102" text-anchor="middle" font-size="12" font-family="Arial, sans-serif" fill="#8F6E2D">1931</text>
+  </g>
+  <text x="250" y="140" font-size="122" font-family="Georgia, serif" fill="#141414" letter-spacing="8">GIA</text>
+</svg>
