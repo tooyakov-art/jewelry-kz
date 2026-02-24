@@ -598,20 +598,71 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	
 		<main class="page front-page">
-			<section class="fv">
-				<div class="fv__img-holder" id="fv-banner">
-					<video autoplay muted loop playsinline preload="metadata">
-					  <source src="/jewelry-kz/st-ones.ru/wp-content/themes/st-ones/assets/img/video-banner.mp4" type="video/mp4">
-					</video>
-				</div>
-				<style>
-					.fv__img-holder video {
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
-					}
-				</style>
-				<div class="fv__content">
+				<section class="fv">
+					<div class="fv__img-holder" id="fv-banner">
+						<img class="fv__fallback" src="/jewelry-kz/st-ones.ru/wp-content/uploads/2024/09/fv-imggrang.png" alt="" fetchpriority="high" decoding="async">
+						<video class="fv__video" muted loop playsinline preload="none" poster="/jewelry-kz/st-ones.ru/wp-content/uploads/2024/09/fv-imggrang.png" aria-hidden="true">
+						  <source data-src="/jewelry-kz/st-ones.ru/wp-content/themes/st-ones/assets/img/video-banner.mp4" type="video/mp4">
+						</video>
+					</div>
+					<style>
+						.fv__img-holder {
+							position: relative;
+							overflow: hidden;
+						}
+						.fv__img-holder .fv__fallback,
+						.fv__img-holder .fv__video {
+							position: absolute;
+							inset: 0;
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+						.fv__img-holder .fv__video {
+							opacity: 0;
+							transition: opacity .35s ease;
+						}
+						.fv__img-holder .fv__video.is-ready {
+							opacity: 1;
+						}
+						@media (max-width: 991px) {
+							.fv__img-holder .fv__video {
+								display: none !important;
+							}
+						}
+					</style>
+					<script>
+					(function () {
+						var video = document.querySelector("#fv-banner .fv__video");
+						if (!video) return;
+						if (window.matchMedia("(max-width: 991px)").matches) return;
+
+						var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+						if (conn && (conn.saveData || /2g/.test(conn.effectiveType || ""))) return;
+
+						function startVideo() {
+							var source = video.querySelector("source[data-src]");
+							if (source && !source.src) {
+								source.src = source.getAttribute("data-src");
+								video.load();
+							}
+							video.addEventListener("loadeddata", function () {
+								video.classList.add("is-ready");
+							}, { once: true });
+							var playPromise = video.play();
+							if (playPromise && typeof playPromise.catch === "function") {
+								playPromise.catch(function () {});
+							}
+						}
+
+						if ("requestIdleCallback" in window) {
+							requestIdleCallback(startVideo, { timeout: 1500 });
+						} else {
+							setTimeout(startVideo, 900);
+						}
+					})();
+					</script>
+					<div class="fv__content">
 					<div class="__container container fv__content-box">
 						<h1 class="fv__title">
 							МИР ИЗЫСКАННЫХ АВТОРСКИХ ДРАГОЦЕННОСТЕЙ						</h1>
