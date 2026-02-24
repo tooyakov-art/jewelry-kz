@@ -4203,6 +4203,21 @@
     addHoverEffect(".text-4", ".statistics__img-top_hov4");
     
 })();;(function () {
+    function normalizeDeliveryFaqText(root) {
+        var scope = root && root.nodeType === 1 ? root : document.body;
+        if (!scope) return;
+
+        var walker = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT, null);
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!node.nodeValue) continue;
+            if (node.nodeValue.indexOf("по всей России") === -1) continue;
+            node.nodeValue = node.nodeValue
+                .replace(/по всей России\./g, "по всему миру.")
+                .replace(/по всей России/g, "по всему миру");
+        }
+    }
+
     function isBlogPath(pathname) {
         var path = (pathname || "").toLowerCase();
         return path.indexOf("/blog/") !== -1 ||
@@ -4247,6 +4262,7 @@
             return;
         }
 
+        normalizeDeliveryFaqText(document.body);
         removeBlogLinksAndBlocks(document);
 
         if (!window.__dmNoBlogObserver && document.body) {
@@ -4255,7 +4271,10 @@
                     var mutation = mutations[i];
                     for (var j = 0; j < mutation.addedNodes.length; j++) {
                         var node = mutation.addedNodes[j];
-                        if (node && node.nodeType === 1) removeBlogLinksAndBlocks(node);
+                        if (node && node.nodeType === 1) {
+                            normalizeDeliveryFaqText(node);
+                            removeBlogLinksAndBlocks(node);
+                        }
                     }
                 }
             });
