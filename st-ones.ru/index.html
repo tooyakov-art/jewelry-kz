@@ -601,7 +601,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				<section class="fv">
 					<div class="fv__img-holder" id="fv-banner">
 						<img class="fv__fallback" src="/jewelry-kz/st-ones.ru/wp-content/uploads/2024/09/fv-imggrang.png" alt="" fetchpriority="high" decoding="async">
-						<video class="fv__video" muted loop playsinline preload="none" poster="/jewelry-kz/st-ones.ru/wp-content/uploads/2024/09/fv-imggrang.png" aria-hidden="true">
+						<video class="fv__video" autoplay muted loop playsinline preload="metadata" poster="/jewelry-kz/st-ones.ru/wp-content/uploads/2024/09/fv-imggrang.png" aria-hidden="true">
 						  <source data-src="/jewelry-kz/st-ones.ru/wp-content/themes/st-ones/assets/img/video-banner.mp4" type="video/mp4">
 						</video>
 					</div>
@@ -625,22 +625,17 @@ document.addEventListener('DOMContentLoaded', () => {
 						.fv__img-holder .fv__video.is-ready {
 							opacity: 1;
 						}
-						@media (max-width: 991px) {
-							.fv__img-holder .fv__video {
-								display: none !important;
-							}
-						}
-					</style>
-					<script>
-					(function () {
-						var video = document.querySelector("#fv-banner .fv__video");
-						if (!video) return;
-						if (window.matchMedia("(max-width: 991px)").matches) return;
+						</style>
+						<script>
+						(function () {
+							var video = document.querySelector("#fv-banner .fv__video");
+							if (!video) return;
+							var isMobile = window.matchMedia("(max-width: 991px)").matches;
 
-						var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-						if (conn && (conn.saveData || /2g/.test(conn.effectiveType || ""))) return;
+							var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+							if (conn && (conn.saveData || /2g/.test(conn.effectiveType || ""))) return;
 
-						function startVideo() {
+							function startVideo() {
 							var source = video.querySelector("source[data-src]");
 							if (source && !source.src) {
 								source.src = source.getAttribute("data-src");
@@ -655,13 +650,18 @@ document.addEventListener('DOMContentLoaded', () => {
 							}
 						}
 
-						if ("requestIdleCallback" in window) {
-							requestIdleCallback(startVideo, { timeout: 1500 });
-						} else {
-							setTimeout(startVideo, 900);
-						}
-					})();
-					</script>
+							if (isMobile) {
+								startVideo();
+								return;
+							}
+
+							if ("requestIdleCallback" in window) {
+								requestIdleCallback(startVideo, { timeout: 1500 });
+							} else {
+								setTimeout(startVideo, 700);
+							}
+						})();
+						</script>
 					<div class="fv__content">
 					<div class="__container container fv__content-box">
 						<h1 class="fv__title">
