@@ -4202,4 +4202,73 @@
     addHoverEffect(".text-3", ".statistics__img-top_hov3");
     addHoverEffect(".text-4", ".statistics__img-top_hov4");
     
+})();;(function () {
+    function isBlogPath(pathname) {
+        var path = (pathname || "").toLowerCase();
+        return path.indexOf("/blog/") !== -1 ||
+            path === "/blog" ||
+            /\/blog\/?$/.test(path) ||
+            path.indexOf("/news/") !== -1 ||
+            path === "/news" ||
+            /\/news\/?$/.test(path);
+    }
+
+    function removeBlogLinksAndBlocks(root) {
+        var scope = root && root.querySelectorAll ? root : document;
+        var links = scope.querySelectorAll("a[href*='/blog'],a[href*='/news']");
+
+        for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            var href = (link.getAttribute("href") || "").toLowerCase();
+            if (href.indexOf("/blog") === -1 && href.indexOf("/news") === -1) continue;
+
+            var menuItem = link.closest("li.menu-item,li,[class*='menu-item'],.menu li,.header li,.footer li");
+            if (menuItem && (menuItem.closest(".header") || menuItem.closest(".footer") || menuItem.closest(".menu"))) {
+                menuItem.remove();
+                continue;
+            }
+
+            var blogSection = link.closest("section,[class*='blog'],[class*='news']");
+            if (blogSection) {
+                var sectionLinks = blogSection.querySelectorAll("a[href*='/blog'],a[href*='/news']");
+                if (sectionLinks.length >= 2 || blogSection.className.toLowerCase().indexOf("blog") !== -1 || blogSection.className.toLowerCase().indexOf("news") !== -1) {
+                    blogSection.remove();
+                    continue;
+                }
+            }
+
+            link.remove();
+        }
+    }
+
+    function enforceNoBlog() {
+        if (isBlogPath(window.location.pathname)) {
+            window.location.replace("/jewelry-kz/st-ones.ru/");
+            return;
+        }
+
+        removeBlogLinksAndBlocks(document);
+
+        if (!window.__dmNoBlogObserver && document.body) {
+            window.__dmNoBlogObserver = new MutationObserver(function (mutations) {
+                for (var i = 0; i < mutations.length; i++) {
+                    var mutation = mutations[i];
+                    for (var j = 0; j < mutation.addedNodes.length; j++) {
+                        var node = mutation.addedNodes[j];
+                        if (node && node.nodeType === 1) removeBlogLinksAndBlocks(node);
+                    }
+                }
+            });
+            window.__dmNoBlogObserver.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+        }
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", enforceNoBlog);
+    } else {
+        enforceNoBlog();
+    }
 })();
