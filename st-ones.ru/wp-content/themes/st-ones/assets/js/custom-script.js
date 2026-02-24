@@ -6,6 +6,8 @@
     var WISHLIST_STORAGE_KEY = "dm_wishlist_item_ids";
     var EVENT_DEBOUNCE_MS = 420;
     var ONE_CLICK_SELECTOR = ".awooc-custom-order-button,[id^='awooc-custom-order-button'],.productcard-section__button-one-click";
+    var GIFT_HINT_SELECTOR = ".open-popup";
+    var OFFER_SELECTOR = ".open-popup-2";
     var WISHLIST_BUTTON_SELECTOR = ".alg-wc-wl-btn[data-item_id]";
     var INFINITE_SENTINEL_CLASS = "dm-infinite-sentinel";
     var INFINITE_SCROLL_OFFSET = 900;
@@ -153,18 +155,64 @@
         };
     }
 
-    function openWhatsApp(details) {
+    function openWhatsApp(details, kind) {
         var phone = pickWhatsAppPhone();
-        var message = [
-            "Здравствуйте! Хочу оформить заказ.",
-            "Изделие: " + (details.title || "Без названия")
-        ];
+        var intent = kind === "offer"
+            ? "Здравствуйте! Хочу получить предложение по изделию."
+            : "Здравствуйте! Хочу оформить заказ.";
+        var message = [intent, "Изделие: " + (details.title || "Без названия")];
         if (details.sku) message.push("Артикул: " + details.sku);
         if (details.price) message.push("Цена: " + details.price);
         message.push("Ссылка: " + (details.url || window.location.href));
 
         var waUrl = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message.join("\n"));
         window.open(waUrl, "_blank", "noopener,noreferrer");
+    }
+
+    function copyText(text) {
+        if (!text) return Promise.resolve(false);
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            return navigator.clipboard.writeText(text).then(function () { return true; }).catch(function () { return false; });
+        }
+        try {
+            var textarea = document.createElement("textarea");
+            textarea.value = text;
+            textarea.setAttribute("readonly", "");
+            textarea.style.position = "fixed";
+            textarea.style.opacity = "0";
+            document.body.appendChild(textarea);
+            textarea.select();
+            var copied = document.execCommand("copy");
+            document.body.removeChild(textarea);
+            return Promise.resolve(!!copied);
+        } catch (error) {
+            return Promise.resolve(false);
+        }
+    }
+
+    function shareGiftHint(details) {
+        var title = details && details.title ? details.title : "Изделие";
+        var url = details && details.url ? details.url : window.location.href;
+        var sharePayload = {
+            title: "Намек на подарок",
+            text: "Посмотри это изделие: " + title,
+            url: url
+        };
+
+        if (navigator.share) {
+            navigator.share(sharePayload).catch(function () {
+                copyText(url).then(function (copied) {
+                    if (copied) alert("Ссылка на изделие скопирована");
+                    else window.prompt("Скопируйте ссылку:", url);
+                });
+            });
+            return;
+        }
+
+        copyText(url).then(function (copied) {
+            if (copied) alert("Ссылка на изделие скопирована");
+            else window.prompt("Скопируйте ссылку:", url);
+        });
     }
 
     function overrideLegacyHooks() {
@@ -484,7 +532,24 @@
             consumeEvent(event);
             if (!shouldRunAction(oneClickButton, "dmWaTs")) return false;
             closeLegacyOneClickUi();
-            openWhatsApp(extractDetails(oneClickButton));
+            openWhatsApp(extractDetails(oneClickButton), "order");
+            return false;
+        }
+
+        var giftHintButton = closest(event.target, GIFT_HINT_SELECTOR);
+        if (giftHintButton) {
+            consumeEvent(event);
+            if (!shouldRunAction(giftHintButton, "dmGiftTs")) return false;
+            shareGiftHint(extractDetails(giftHintButton));
+            return false;
+        }
+
+        var offerButton = closest(event.target, OFFER_SELECTOR);
+        if (offerButton) {
+            consumeEvent(event);
+            if (!shouldRunAction(offerButton, "dmOfferTs")) return false;
+            closeLegacyOneClickUi();
+            openWhatsApp(extractDetails(offerButton), "offer");
             return false;
         }
 
@@ -499,7 +564,12 @@
     }
 
     function onPreemptEvent(event) {
-        if (closest(event.target, ONE_CLICK_SELECTOR) || closest(event.target, WISHLIST_BUTTON_SELECTOR)) {
+        if (
+            closest(event.target, ONE_CLICK_SELECTOR) ||
+            closest(event.target, GIFT_HINT_SELECTOR) ||
+            closest(event.target, OFFER_SELECTOR) ||
+            closest(event.target, WISHLIST_BUTTON_SELECTOR)
+        ) {
             consumeEvent(event);
             return false;
         }
