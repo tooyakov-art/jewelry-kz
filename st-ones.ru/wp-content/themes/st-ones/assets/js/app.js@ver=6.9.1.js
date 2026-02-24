@@ -4277,6 +4277,9 @@
             "    opacity: 1 !important;",
             "    box-shadow: none !important;",
             "  }",
+            "  .fon__katalog .header__logo::after {",
+            "    background: transparent !important;",
+            "  }",
             "}"
         ].join("");
         document.head.appendChild(style);
