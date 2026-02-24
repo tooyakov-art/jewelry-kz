@@ -4266,9 +4266,29 @@
         }
     }
 
+    function enforceMobileBurgerContrast() {
+        if (document.getElementById("dm-mobile-burger-contrast")) return;
+        var style = document.createElement("style");
+        style.id = "dm-mobile-burger-contrast";
+        style.textContent = [
+            "@media (max-width: 767px) {",
+            "  .icon-menu span, .icon-menu::before, .icon-menu::after {",
+            "    background-color: #F6F0E8 !important;",
+            "    opacity: 1 !important;",
+            "    box-shadow: none !important;",
+            "  }",
+            "}"
+        ].join("");
+        document.head.appendChild(style);
+    }
+
     if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", enforceNoBlog);
+        document.addEventListener("DOMContentLoaded", function () {
+            enforceNoBlog();
+            enforceMobileBurgerContrast();
+        });
     } else {
         enforceNoBlog();
+        enforceMobileBurgerContrast();
     }
 })();
