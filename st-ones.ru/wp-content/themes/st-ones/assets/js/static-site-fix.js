@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var isCatalogPage = window.location.pathname.indexOf('/product-category/') !== -1 || window.location.pathname.indexOf('/shop/') !== -1;
     var productionImage = '/jewelry-kz/st-ones.ru/wp-content/themes/st-ones/assets/img/home/production-emerald-2026.webp';
-    var toOrderImage = '/jewelry-kz/st-ones.ru/wp-content/themes/st-ones/assets/img/home/to-order-earrings-2026.webp';
+    var toOrderImage = '/jewelry-kz/st-ones.ru/wp-content/themes/st-ones/assets/img/home/to-order-emerald-sketch-2026.jpg';
 
     function processCatalogCustomBlocks(root) {
         if (!isCatalogPage) return;
