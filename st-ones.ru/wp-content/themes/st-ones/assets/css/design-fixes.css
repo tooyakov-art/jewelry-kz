@@ -1528,3 +1528,25 @@ body:not(.home) .section-aboutas__title.title-section {
     color: #1A1A1A !important;
     opacity: 1 !important;
 }
+
+/* Remove leaf ornaments site-wide (desktop + mobile) */
+[class*="__img-decor"],
+.reviews__decor-img,
+.color-img-text,
+svg.color-img-text,
+img[src*="/assets/img/home/decor.png"],
+img[src*="/assets/img/home/decor-reviews.png"],
+img[src*="/assets/img/home/decor-form.png"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+[class*="__img-decor"]::before,
+[class*="__img-decor"]::after,
+.reviews__decor-img::before,
+.reviews__decor-img::after {
+    content: none !important;
+    background: none !important;
+}
