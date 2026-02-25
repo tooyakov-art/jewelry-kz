@@ -1564,3 +1564,38 @@ img[src*="/assets/img/home/decor-form.png"] {
     content: none !important;
     background: none !important;
 }
+
+/* Fix mobile menu not fully visible */
+.menu__body_mob {
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    overflow-y: auto !important;
+}
+
+/* Fix precious-stones / "Украшения на заказ" white background on dark pages */
+body:not(.home) .precious-stones .box-container,
+body:not(.home) .precious-stones__block-info {
+    background-color: rgba(14, 22, 34, 0.9) !important;
+    color: rgba(246, 240, 232, 0.9) !important;
+    border: 1px solid rgba(183, 154, 107, 0.26);
+    border-radius: 18px;
+}
+
+body:not(.home) .precious-stones__title {
+    color: rgba(246, 240, 232, 0.95) !important;
+}
+
+body:not(.home) .precious-stones__link {
+    color: var(--dm-gold, #B79A6B) !important;
+}
+
+/* Fix production section on about page */
+body:not(.home) .production {
+    color: rgba(246, 240, 232, 0.9) !important;
+}
+
+body:not(.home) .production__block-info {
+    background-color: rgba(14, 22, 34, 0.9) !important;
+    border: 1px solid rgba(183, 154, 107, 0.26);
+    border-radius: 18px;
+}
