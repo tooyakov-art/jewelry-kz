@@ -219,7 +219,7 @@ body.home .to-order__text {
 
 body.home .production-section__inner {
     display: grid;
-    grid-template-columns: minmax(320px, 0.94fr) minmax(320px, 1.06fr);
+    grid-template-columns: 1fr;
     gap: 28px;
     align-items: center;
     background: rgba(18, 26, 36, 0.9);
