@@ -794,6 +794,7 @@ body.fon__katalog .header__top,
 body.fon__katalog .header__top::after,
 body.fon__katalog .menu__body_mob {
     background: var(--dm-cat-dark) !important;
+    transition: none !important;
 }
 
 body.fon__katalog .header {
@@ -1394,6 +1395,7 @@ body.archive.fon__katalog .header__top,
 body.archive.fon__katalog .header__top::after,
 body.archive.fon__katalog .menu__body_mob {
     background: var(--dm-cat-dark) !important;
+    transition: none !important;
 }
 
 body.archive .header,

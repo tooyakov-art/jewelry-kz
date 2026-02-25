@@ -908,11 +908,11 @@ span.aws-search-btn_icon svg path {
 }
 .fon__katalog .header__top::after {
     background-color: #4D4B49;
-    transition: all 2.5s ease 0s;
+    transition: none;
 }
 .fon__katalog .header__top {
     color: rgb(255 255 255 / 80%);
-    transition: all 2.5s ease 0s;
+    transition: none;
 }
 
 .header__top-graph {
@@ -987,7 +987,7 @@ span.aws-search-btn_icon svg path {
     }
     .fon__katalog .header__logo::after {
         background-color: #4D4B49;
-        transition: all 2.5s ease 0s;
+        transition: none;
     }
 }
 
