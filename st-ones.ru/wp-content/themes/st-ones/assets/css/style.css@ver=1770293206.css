@@ -71,7 +71,7 @@ h6 {
 }
 
 body {
-  background-color: #fff9f3;
+  background-color: #0E1622;
 }
 
 .lock body {
@@ -157,8 +157,8 @@ body {
   position: fixed;
   z-index: 10;
   width: 100%;
-  background-color: #fff9f3;
-  border-bottom: .3px solid rgba(0,0,0,.3);
+  background-color: #0E1622;
+  border-bottom: .3px solid rgba(183,154,107,.3);
 }
 
 .header__container {
@@ -230,7 +230,7 @@ body {
 }
 
 .menu-item a {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-weight: 300;
   line-height: 24px;
   text-align: left;
@@ -295,7 +295,7 @@ body {
 .header .menu-item:hover a:hover {
   -webkit-transition: all .5s ease 0s;
   transition: all .5s ease 0s;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-weight: 500;
 }
 
@@ -312,13 +312,13 @@ body {
 
 .sub-menu a {
   float: none;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-size: 16px;
   font-weight: 300;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-  background-color: #fff9f3;
+  background-color: #0E1622;
   border-left: .3px solid rgba(0,0,0,.3);
   border-right: .3px solid rgba(0,0,0,.3);
   min-width: 248px;
@@ -340,7 +340,7 @@ body {
 .sub-menu a:hover {
   -webkit-transition: all .3s ease 0s;
   transition: all .3s ease 0s;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-weight: 500;
 }
 
@@ -369,7 +369,7 @@ body {
 }
 
 .sub-menu .menu-item:last-child a {
-  border-bottom: .3px solid rgba(0,0,0,.3);
+  border-bottom: .3px solid rgba(183,154,107,.3);
 }
 
 .menu__body_mob .menu-item-has-children a {
@@ -399,7 +399,7 @@ body {
 
 .menu__body_mob .sub-menu .menu-item a {
   height: 54px;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-weight: 300;
   line-height: 24px;
   text-align: left;
@@ -408,8 +408,8 @@ body {
 }
 
 .menu__body_mob .menu-item-has-children a {
-  border-bottom: .3px solid rgba(0,0,0,.3);
-  color: rgba(0,0,0,.7);
+  border-bottom: .3px solid rgba(183,154,107,.3);
+  color: rgba(246,240,232,.9);
   font-weight: 300;
   line-height: 24px;
   text-align: center;
@@ -812,7 +812,7 @@ form.footer__menu input::placeholder {
 }
 
 .katalog-section__slide-title {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-weight: 400;
   line-height: 122.222222%;
@@ -825,7 +825,7 @@ form.footer__menu input::placeholder {
   max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 0 auto;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-size: 18px;
   font-weight: 400;
   line-height: 100%;
@@ -837,7 +837,7 @@ form.footer__menu input::placeholder {
 }
 
 .title-section {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-weight: 600;
   line-height: 121.428571%;
@@ -858,7 +858,7 @@ form.footer__menu input::placeholder {
   content: "";
   display: block;
   height: 2px;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(246,240,232,.9);
   position: absolute;
   top: 50%;
   right: 100%;
@@ -869,7 +869,7 @@ form.footer__menu input::placeholder {
   content: "";
   display: block;
   height: 2px;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(246,240,232,.9);
   position: absolute;
   top: 50%;
   left: 100%;
@@ -974,7 +974,7 @@ form.footer__menu input::placeholder {
 }
 
 .new-items__slide-title {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-weight: 400;
   line-height: 39px;
@@ -1132,7 +1132,7 @@ form.footer__menu input::placeholder {
 }
 
 .hits-section__slide-title {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-weight: 400;
   line-height: 121.875%;
@@ -1185,7 +1185,7 @@ form.footer__menu input::placeholder {
 }
 
 .hits-section__carat-text {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-size: 14px;
   font-weight: 300;
@@ -1218,7 +1218,7 @@ form.footer__menu input::placeholder {
   max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 0 auto;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-size: 18px;
   font-weight: 400;
   line-height: 100%;
@@ -1291,7 +1291,7 @@ form.footer__menu input::placeholder {
 }
 
 .section-stones__card-title {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-weight: 400;
   line-height: 121.875%;
@@ -1431,7 +1431,7 @@ form.footer__menu input::placeholder {
 }
 
 .reviews__slide-title {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-weight: 700;
   line-height: 120.833333%;
@@ -1440,7 +1440,7 @@ form.footer__menu input::placeholder {
 }
 
 .reviews__slide-text {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-weight: 500;
   line-height: 27px;
@@ -1476,7 +1476,7 @@ form.footer__menu input::placeholder {
 }
 
 .certificate__subtitle {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-size: 22px;
   font-weight: 400;
@@ -1521,7 +1521,7 @@ form.footer__menu input::placeholder {
 }
 
 .blog__item-title {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-weight: 400;
   line-height: 122.727273%;
@@ -1533,7 +1533,7 @@ form.footer__menu input::placeholder {
   right: 0;
   z-index: 3;
   display: block;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-weight: 400;
   line-height: 125%;
   text-transform: uppercase;
@@ -1619,7 +1619,7 @@ form.footer__menu input::placeholder {
 .sn-accordion-container .set .h5,
 .sn-accordion-container .set h5.active {
   cursor: pointer;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-weight: 300;
   line-height: 122.727273%;
   border-bottom: 1px solid #ddd;
@@ -1801,7 +1801,7 @@ form.footer__menu input::placeholder {
 }
 
 .sn-accordion-container .set .content p {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-weight: 300;
   line-height: 122.727273%;
 }
@@ -2553,7 +2553,7 @@ form.footer__menu input::placeholder {
   max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 0 auto;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-size: 18px;
   font-weight: 400;
   line-height: 100%;
@@ -2594,7 +2594,7 @@ form.footer__menu input::placeholder {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-size: 18px;
   font-weight: 400;
   line-height: 100%;
@@ -2719,7 +2719,7 @@ form.footer__menu input::placeholder {
 }
 
 .productcard-section__title {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-weight: 500;
   line-height: 100%;
@@ -2897,7 +2897,7 @@ form.footer__menu input::placeholder {
 
 .brand-section__text {
   width: 80%;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-weight: 400;
   line-height: 122.727273%;
 }
@@ -3426,7 +3426,7 @@ form.footer__menu input::placeholder {
 
 .woocommerce-products-header__title {
   text-align: center;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-weight: 600;
   text-transform: uppercase;
@@ -3437,18 +3437,18 @@ form.footer__menu input::placeholder {
 }
 
 .woocommerce-breadcrumb a {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-weight: 400;
 }
 
 .woocommerce-loop-product__title {
   font-family: "Cormorant Garamond";
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
 }
 
 .price {
   font-family: "Cormorant Garamond";
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
 }
 
 .woocommerce-result-count {
@@ -3551,7 +3551,7 @@ form.footer__menu input::placeholder {
 
 .section-aboutas__text {
   text-align: center;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-size: 16px;
   font-weight: 500;
@@ -3568,7 +3568,7 @@ form.footer__menu input::placeholder {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-weight: 400;
   line-height: 122.222222%;
   text-transform: uppercase;
@@ -3634,7 +3634,7 @@ form.footer__menu input::placeholder {
 
 .decorations-order__text {
   text-align: center;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-size: 16px;
   font-weight: 500;
@@ -3651,7 +3651,7 @@ form.footer__menu input::placeholder {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-weight: 400;
   line-height: 122.222222%;
   text-transform: uppercase;
@@ -3878,7 +3878,7 @@ li.product {
 }
 
 .blog-section__card-title {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-size: 22px;
   font-weight: 500;
   line-height: 122.727273%;
@@ -3886,14 +3886,14 @@ li.product {
 }
 
 .blog-section__card-text {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-size: 22px;
   font-weight: 300;
   line-height: 122.727273%;
 }
 
 .blog-section__card-date {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-size: 18px;
   font-weight: 275;
   line-height: 122.222222%;
@@ -3950,7 +3950,7 @@ li.product {
 }
 
 .section-post__text {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-weight: 400;
   line-height: 150%;
 }
@@ -3965,7 +3965,7 @@ li.product {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 20px 40px;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-weight: 400;
   line-height: 125%;
   text-transform: uppercase;
@@ -4107,7 +4107,7 @@ li.product {
 
 .woocommerce-products-header__title {
   text-align: center;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-weight: 600;
   text-transform: uppercase;
@@ -4118,18 +4118,18 @@ li.product {
 }
 
 .woocommerce-breadcrumb a {
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-weight: 400;
 }
 
 .woocommerce-loop-product__title {
   font-family: "Cormorant Garamond";
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
 }
 
 .price {
   font-family: "Cormorant Garamond";
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
 }
 
 .woocommerce-result-count {
@@ -4220,7 +4220,7 @@ li.product {
 
 .section-aboutas__text {
   text-align: center;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-size: 16px;
   font-weight: 500;
@@ -4237,7 +4237,7 @@ li.product {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-weight: 400;
   line-height: 122.222222%;
   text-transform: uppercase;
@@ -4303,7 +4303,7 @@ li.product {
 
 .decorations-order__text {
   text-align: center;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-family: "Cormorant Garamond";
   font-size: 16px;
   font-weight: 500;
@@ -4320,7 +4320,7 @@ li.product {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: rgba(0,0,0,.7);
+  color: rgba(246,240,232,.9);
   font-weight: 400;
   line-height: 122.222222%;
   text-transform: uppercase;
@@ -7122,7 +7122,7 @@ li.product {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
-    background-color: #fff9f3;
+    background-color: #0E1622;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -7143,7 +7143,7 @@ li.product {
   }
 
   .menu-item {
-    border-bottom: .3px solid rgba(0,0,0,.3);
+    border-bottom: .3px solid rgba(183,154,107,.3);
     padding-bottom: 15px;
   }
 
@@ -7165,7 +7165,7 @@ li.product {
     position: absolute;
     width: 100%;
     height: 0.125rem;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(246,240,232,.9);
   }
 
   .icon-menu::before {
@@ -7962,7 +7962,7 @@ li.product {
     -webkit-transition: all .3s ease 0s;
     transition: all .3s ease 0s;
     background-color: #fff;
-    color: rgba(0,0,0,.7);
+    color: rgba(246,240,232,.9);
   }
 
   .page-blog .hits-section__img-decor {

@@ -1565,11 +1565,61 @@ img[src*="/assets/img/home/decor-form.png"] {
     background: none !important;
 }
 
-/* Fix mobile menu not fully visible */
-.menu__body_mob {
-    max-height: 100vh !important;
-    max-height: 100dvh !important;
+/* ===== COMPREHENSIVE MOBILE MENU FIX ===== */
+.menu__body.menu__body_mob {
+    top: 0 !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    max-height: none !important;
     overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    background-color: #0E1622 !important;
+    z-index: 50 !important;
+    padding-top: 75px !important;
+    padding-bottom: 100px !important;
+}
+
+/* Mobile menu item text colors (light on dark) */
+.menu__body_mob .menu-item > a,
+.menu__body_mob .menu-item-has-children > a,
+.menu__body_mob .menu-item-has-children a {
+    color: rgba(246, 240, 232, 0.9) !important;
+    border-bottom-color: rgba(183, 154, 107, 0.3) !important;
+}
+
+.menu__body_mob .menu-item > a:hover,
+.menu__body_mob .current-menu-item > a,
+.menu__body_mob .current_page_item > a {
+    color: #B79A6B !important;
+}
+
+/* Mobile sub-menu items */
+.menu__body_mob .sub-menu .menu-item a {
+    color: rgba(246, 240, 232, 0.8) !important;
+    border-bottom-color: rgba(183, 154, 107, 0.2) !important;
+}
+
+.menu__body_mob .sub-menu .menu-item a:hover {
+    color: #B79A6B !important;
+    box-shadow: 0px 0px 10px 0 rgba(183, 154, 107, 0.15) inset !important;
+}
+
+/* Mobile menu item borders gold on dark */
+.menu__body_mob .menu-item {
+    border-bottom-color: rgba(183, 154, 107, 0.3) !important;
+}
+
+.menu__body_mob .sub-menu .menu-item:last-child a {
+    border-bottom-color: rgba(183, 154, 107, 0.2) !important;
+}
+
+/* Mobile menu dropdown arrow color */
+.menu__body_mob .menu-item-has-children::after {
+    border-top-color: rgba(246, 240, 232, 0.7) !important;
+}
+
+.menu__body_mob .menu-item-has-children:hover::after {
+    border-top-color: #B79A6B !important;
 }
 
 /* Fix precious-stones / "Украшения на заказ" white background */
