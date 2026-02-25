@@ -1094,6 +1094,18 @@ body:not(.home) .header .menu-item .sub-menu li a:hover {
     background: rgba(183, 154, 107, 0.08) !important;
 }
 
+body:not(.home) .icon-menu span,
+body:not(.home) .icon-menu::before,
+body:not(.home) .icon-menu::after {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+body.home .icon-menu span,
+body.home .icon-menu::before,
+body.home .icon-menu::after {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
 body:not(.home) .aws-container .aws-search-field,
 body:not(.home) .aws-container .aws-search-form {
     background: transparent !important;

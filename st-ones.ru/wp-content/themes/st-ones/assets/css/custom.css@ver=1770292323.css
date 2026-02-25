@@ -855,7 +855,7 @@ span.aws-search-btn_icon svg path {
         content: "";
         height: 100%;
         width: 110%;
-        background-color: #F3EDE6;
+        background-color: #0E1622;
         display: block;
         top: 0;
         position: absolute;
@@ -870,7 +870,7 @@ span.aws-search-btn_icon svg path {
 
 @media (max-width: 767px) {
     .header {
-        background-color: #F3EDE6;
+        background-color: #0E1622;
     }
 }
 
@@ -903,7 +903,7 @@ span.aws-search-btn_icon svg path {
     width: 300%;
     height: 200%;
     display: block;
-    background-color: #F3EDE6;
+    background-color: #0E1622;
     z-index: -1;
 }
 .fon__katalog .header__top::after {
@@ -1045,7 +1045,7 @@ span.aws-search-btn_icon svg path {
         display: none;
     }
     .popup__form-block {
-        background-color: #F3EDE6;
+        background-color: #0E1622;
         padding: 110px 32px 78px 32px;
         max-width: 400px;
         position: relative;
