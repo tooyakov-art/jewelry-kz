@@ -1323,7 +1323,7 @@ form.footer__menu input::placeholder {
 }
 
 .precious-stones .box-container {
-  background-color: #f3ede6;
+  background-color: #0E1622;
 }
 
 .precious-stones__content {
@@ -1337,7 +1337,7 @@ form.footer__menu input::placeholder {
 
 .precious-stones__block-info {
   position: relative;
-  background-color: #f3ede6;
+  background-color: #0E1622;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

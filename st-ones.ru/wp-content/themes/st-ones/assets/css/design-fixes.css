@@ -1572,30 +1572,35 @@ img[src*="/assets/img/home/decor-form.png"] {
     overflow-y: auto !important;
 }
 
-/* Fix precious-stones / "Украшения на заказ" white background on dark pages */
-body:not(.home) .precious-stones .box-container,
-body:not(.home) .precious-stones__block-info {
-    background-color: rgba(14, 22, 34, 0.9) !important;
+/* Fix precious-stones / "Украшения на заказ" white background */
+.precious-stones,
+.precious-stones .box-container,
+.precious-stones__block-info,
+.precious-stones__content {
+    background-color: #0E1622 !important;
+    background: #0E1622 !important;
     color: rgba(246, 240, 232, 0.9) !important;
-    border: 1px solid rgba(183, 154, 107, 0.26);
-    border-radius: 18px;
 }
 
-body:not(.home) .precious-stones__title {
+.precious-stones .box-container {
+    border: 1px solid rgba(183, 154, 107, 0.26) !important;
+    border-radius: 18px !important;
+}
+
+.precious-stones__title {
     color: rgba(246, 240, 232, 0.95) !important;
 }
 
-body:not(.home) .precious-stones__link {
-    color: var(--dm-gold, #B79A6B) !important;
+.precious-stones__link {
+    color: #B79A6B !important;
 }
 
 /* Fix production section on about page */
-body:not(.home) .production {
+.production,
+.production__block-info,
+.production__block,
+.production .box-container {
+    background-color: #0E1622 !important;
+    background: #0E1622 !important;
     color: rgba(246, 240, 232, 0.9) !important;
-}
-
-body:not(.home) .production__block-info {
-    background-color: rgba(14, 22, 34, 0.9) !important;
-    border: 1px solid rgba(183, 154, 107, 0.26);
-    border-radius: 18px;
 }
