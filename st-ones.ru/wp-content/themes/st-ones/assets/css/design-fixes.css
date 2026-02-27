@@ -104,7 +104,17 @@ body.home .fv__title {
     line-height: 1.25;
 }
 
-body.home .fv__link-box a,
+body.home .fv__link-box a {
+    display: inline-block;
+    min-width: auto;
+    padding-right: 20px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255,.804);
+    color: var(--dm-ivory) !important;
+    transition: all 0.25s ease;
+}
+
 body.home .button-green-hover,
 body.home .feedback-form .form-block__button {
     background: var(--dm-navy);
