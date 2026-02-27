@@ -99,6 +99,9 @@ body.home .fv__title {
     color: #FDF9F3;
     text-shadow: 0 10px 28px rgba(0, 0, 0, 0.38);
     max-width: 760px;
+    text-transform: none;
+    font-size: clamp(1.5rem, 1.1rem + 2vw, 2.8rem);
+    line-height: 1.25;
 }
 
 body.home .fv__link-box a,
