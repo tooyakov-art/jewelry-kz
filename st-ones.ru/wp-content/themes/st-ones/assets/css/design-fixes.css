@@ -106,9 +106,9 @@ body.home .fv__title {
 
 @media (max-width: 768px) {
     body.home .fv__title {
-        max-width: 85%;
-        font-size: 1.2rem;
-        line-height: 1.35;
+        max-width: 100% !important;
+        font-size: 0.95rem !important;
+        line-height: 1.4;
     }
 }
 
