@@ -110,6 +110,25 @@ body.home .fv__title {
         font-size: 0.95rem !important;
         line-height: 1.4;
     }
+    body.home .fv__content-box {
+        align-items: flex-start !important;
+    }
+    body.home .fv__link-box {
+        margin-top: 12px;
+    }
+    body.home .fv__link-box a {
+        font-size: 16px !important;
+    }
+}
+
+/* Fix production section on o-nas page - no white bg */
+.production__block-img {
+    background-color: #0e1622 !important;
+}
+.production__block-img img {
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 body.home .fv__link-box a {
