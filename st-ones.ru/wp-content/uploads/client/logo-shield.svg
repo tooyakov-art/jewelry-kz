@@ -1,5 +1,4 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Dameli shield">
-  <path d="M256 36l168 86v140c0 98-70 176-168 214C158 438 88 360 88 262V122z" fill="none" stroke="#B79A6B" stroke-width="20"/>
-  <path d="M256 78l132 68v113c0 80-54 146-132 180-78-34-132-100-132-180V146z" fill="none" stroke="#B79A6B" stroke-width="12"/>
-  <text x="256" y="307" text-anchor="middle" fill="#B79A6B" font-size="180" font-family="Cormorant Garamond, Times New Roman, serif">D</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Dameli D">
+  <circle cx="256" cy="256" r="230" fill="#1a1a2e"/>
+  <text x="256" y="307" text-anchor="middle" fill="#B79A6B" font-size="280" font-family="Cormorant Garamond, Times New Roman, serif">D</text>
 </svg>

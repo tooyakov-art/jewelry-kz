@@ -1,10 +1,85 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 220" role="img" aria-label="GIA certification">
-  <rect width="780" height="220" rx="16" fill="#FFFFFF"/>
-  <g transform="translate(32 26)">
-    <circle cx="84" cy="84" r="78" fill="none" stroke="#C7A55F" stroke-width="6"/>
-    <circle cx="84" cy="84" r="58" fill="none" stroke="#C7A55F" stroke-width="4"/>
-    <text x="84" y="76" text-anchor="middle" font-size="26" font-family="Georgia, serif" fill="#8F6E2D">GIA</text>
-    <text x="84" y="102" text-anchor="middle" font-size="12" font-family="Arial, sans-serif" fill="#8F6E2D">1931</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-label="GIA">
+  <rect width="800" height="340" fill="#FFFFFF"/>
+  <g transform="translate(100 20)">
+    <!-- Outer sunburst circle -->
+    <g transform="translate(120 150)">
+      <!-- Sunburst rays -->
+      <circle cx="0" cy="0" r="120" fill="none" stroke="#C7A55F" stroke-width="2"/>
+      <g fill="#C7A55F">
+        <polygon points="0,-120 -6,-105 6,-105" id="ray"/>
+        <use href="#ray" transform="rotate(7.5)"/>
+        <use href="#ray" transform="rotate(15)"/>
+        <use href="#ray" transform="rotate(22.5)"/>
+        <use href="#ray" transform="rotate(30)"/>
+        <use href="#ray" transform="rotate(37.5)"/>
+        <use href="#ray" transform="rotate(45)"/>
+        <use href="#ray" transform="rotate(52.5)"/>
+        <use href="#ray" transform="rotate(60)"/>
+        <use href="#ray" transform="rotate(67.5)"/>
+        <use href="#ray" transform="rotate(75)"/>
+        <use href="#ray" transform="rotate(82.5)"/>
+        <use href="#ray" transform="rotate(90)"/>
+        <use href="#ray" transform="rotate(97.5)"/>
+        <use href="#ray" transform="rotate(105)"/>
+        <use href="#ray" transform="rotate(112.5)"/>
+        <use href="#ray" transform="rotate(120)"/>
+        <use href="#ray" transform="rotate(127.5)"/>
+        <use href="#ray" transform="rotate(135)"/>
+        <use href="#ray" transform="rotate(142.5)"/>
+        <use href="#ray" transform="rotate(150)"/>
+        <use href="#ray" transform="rotate(157.5)"/>
+        <use href="#ray" transform="rotate(165)"/>
+        <use href="#ray" transform="rotate(172.5)"/>
+        <use href="#ray" transform="rotate(180)"/>
+        <use href="#ray" transform="rotate(187.5)"/>
+        <use href="#ray" transform="rotate(195)"/>
+        <use href="#ray" transform="rotate(202.5)"/>
+        <use href="#ray" transform="rotate(210)"/>
+        <use href="#ray" transform="rotate(217.5)"/>
+        <use href="#ray" transform="rotate(225)"/>
+        <use href="#ray" transform="rotate(232.5)"/>
+        <use href="#ray" transform="rotate(240)"/>
+        <use href="#ray" transform="rotate(247.5)"/>
+        <use href="#ray" transform="rotate(255)"/>
+        <use href="#ray" transform="rotate(262.5)"/>
+        <use href="#ray" transform="rotate(270)"/>
+        <use href="#ray" transform="rotate(277.5)"/>
+        <use href="#ray" transform="rotate(285)"/>
+        <use href="#ray" transform="rotate(292.5)"/>
+        <use href="#ray" transform="rotate(300)"/>
+        <use href="#ray" transform="rotate(307.5)"/>
+        <use href="#ray" transform="rotate(315)"/>
+        <use href="#ray" transform="rotate(322.5)"/>
+        <use href="#ray" transform="rotate(330)"/>
+        <use href="#ray" transform="rotate(337.5)"/>
+        <use href="#ray" transform="rotate(345)"/>
+        <use href="#ray" transform="rotate(352.5)"/>
+      </g>
+      <!-- Inner circles -->
+      <circle cx="0" cy="0" r="102" fill="none" stroke="#C7A55F" stroke-width="2.5"/>
+      <circle cx="0" cy="0" r="95" fill="none" stroke="#C7A55F" stroke-width="1"/>
+      <!-- Text around circle -->
+      <path id="topArc" d="M -80,0 A 80,80 0 0,1 80,0" fill="none"/>
+      <text font-family="Georgia, serif" font-size="13" fill="#C7A55F" letter-spacing="4">
+        <textPath href="#topArc" startOffset="50%" text-anchor="middle">KNOWLEDGE  INTEGRITY  EXCELLENCE</textPath>
+      </text>
+      <!-- Shield in center -->
+      <g transform="translate(-28,-20)">
+        <path d="M28,0 L56,14 L56,38 C56,56 42,68 28,74 C14,68 0,56 0,38 L0,14 Z" fill="none" stroke="#C7A55F" stroke-width="2"/>
+        <line x1="0" y1="38" x2="56" y2="38" stroke="#C7A55F" stroke-width="1.5"/>
+        <text x="28" y="32" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#C7A55F" font-weight="bold">GIA</text>
+        <!-- Globe hint -->
+        <circle cx="28" cy="54" r="10" fill="none" stroke="#C7A55F" stroke-width="1"/>
+        <!-- Diamond -->
+        <polygon points="20,62 28,70 36,62 28,54" fill="none" stroke="#C7A55F" stroke-width="0.8"/>
+      </g>
+      <!-- Year -->
+      <text x="0" y="95" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#C7A55F" letter-spacing="2">1931</text>
+    </g>
   </g>
-  <text x="250" y="140" font-size="122" font-family="Georgia, serif" fill="#141414" letter-spacing="8">GIA</text>
+  <!-- Large GIA text -->
+  <g transform="translate(380 80)">
+    <text x="0" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="200" fill="#1A1A1A" letter-spacing="12" font-weight="400">GIA</text>
+    <text x="310" y="50" font-family="Georgia, serif" font-size="36" fill="#1A1A1A">&#174;</text>
+  </g>
 </svg>

@@ -1,4 +1,32 @@
-﻿/* Dameli homepage-only adjustments (scope-locked) */
+﻿/* FoglihtenNo06 font for headings */
+@font-face {
+    font-family: 'FoglihtenNo06';
+    src: url('../fonts/FoglihtenNo06.woff2') format('woff2'),
+         url('../fonts/FoglihtenNo06.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1, h2, h3, h4, h5, h6,
+.title-section,
+.hero__title,
+.about-house__title,
+.section-stones__title,
+.hits-section__title,
+.to-order__title,
+.production-section__title,
+.certificate__title,
+.faq__title,
+.reviews__title,
+.section-about__title,
+.production__title,
+.page-certificate__title,
+.hero-page__title {
+    font-family: 'FoglihtenNo06', serif !important;
+}
+
+/* Dameli homepage-only adjustments (scope-locked) */
 
 body.home {
     --dm-ivory: #F6F0E8;

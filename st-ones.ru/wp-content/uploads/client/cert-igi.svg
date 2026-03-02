@@ -1,9 +1,61 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 220" role="img" aria-label="IGI certification">
-  <rect width="780" height="220" rx="16" fill="#FFFFFF"/>
-  <g transform="translate(34 34)">
-    <circle cx="76" cy="76" r="66" fill="none" stroke="#AAA39A" stroke-width="10"/>
-    <circle cx="76" cy="76" r="36" fill="none" stroke="#AAA39A" stroke-width="6"/>
-    <path d="M44 76h64M76 44v64" stroke="#AAA39A" stroke-width="5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 300" role="img" aria-label="IGI">
+  <rect width="650" height="300" fill="#FFFFFF"/>
+  <!-- Seal/medallion -->
+  <g transform="translate(115 150)">
+    <!-- Outer gear-like border -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#A89880" stroke-width="3"/>
+    <g fill="#A89880">
+      <polygon points="0,-100 -5,-88 5,-88" id="igiRay"/>
+      <use href="#igiRay" transform="rotate(10)"/>
+      <use href="#igiRay" transform="rotate(20)"/>
+      <use href="#igiRay" transform="rotate(30)"/>
+      <use href="#igiRay" transform="rotate(40)"/>
+      <use href="#igiRay" transform="rotate(50)"/>
+      <use href="#igiRay" transform="rotate(60)"/>
+      <use href="#igiRay" transform="rotate(70)"/>
+      <use href="#igiRay" transform="rotate(80)"/>
+      <use href="#igiRay" transform="rotate(90)"/>
+      <use href="#igiRay" transform="rotate(100)"/>
+      <use href="#igiRay" transform="rotate(110)"/>
+      <use href="#igiRay" transform="rotate(120)"/>
+      <use href="#igiRay" transform="rotate(130)"/>
+      <use href="#igiRay" transform="rotate(140)"/>
+      <use href="#igiRay" transform="rotate(150)"/>
+      <use href="#igiRay" transform="rotate(160)"/>
+      <use href="#igiRay" transform="rotate(170)"/>
+      <use href="#igiRay" transform="rotate(180)"/>
+      <use href="#igiRay" transform="rotate(190)"/>
+      <use href="#igiRay" transform="rotate(200)"/>
+      <use href="#igiRay" transform="rotate(210)"/>
+      <use href="#igiRay" transform="rotate(220)"/>
+      <use href="#igiRay" transform="rotate(230)"/>
+      <use href="#igiRay" transform="rotate(240)"/>
+      <use href="#igiRay" transform="rotate(250)"/>
+      <use href="#igiRay" transform="rotate(260)"/>
+      <use href="#igiRay" transform="rotate(270)"/>
+      <use href="#igiRay" transform="rotate(280)"/>
+      <use href="#igiRay" transform="rotate(290)"/>
+      <use href="#igiRay" transform="rotate(300)"/>
+      <use href="#igiRay" transform="rotate(310)"/>
+      <use href="#igiRay" transform="rotate(320)"/>
+      <use href="#igiRay" transform="rotate(330)"/>
+      <use href="#igiRay" transform="rotate(340)"/>
+      <use href="#igiRay" transform="rotate(350)"/>
+    </g>
+    <!-- Inner circles -->
+    <circle cx="0" cy="0" r="85" fill="none" stroke="#A89880" stroke-width="2"/>
+    <circle cx="0" cy="0" r="78" fill="none" stroke="#A89880" stroke-width="1"/>
+    <!-- Text around circle -->
+    <path id="igiTopArc" d="M -65,-10 A 65,65 0 0,1 65,-10" fill="none"/>
+    <text font-family="'Times New Roman', Georgia, serif" font-size="11" fill="#A89880" letter-spacing="3">
+      <textPath href="#igiTopArc" startOffset="50%" text-anchor="middle">INTERNATIONAL GEMOLOGICAL INSTITUTE</textPath>
+    </text>
+    <!-- Diamond shape -->
+    <polygon points="0,-25 18,0 0,25 -18,0" fill="none" stroke="#A89880" stroke-width="1.8"/>
+    <polygon points="0,-18 12,0 0,18 -12,0" fill="none" stroke="#A89880" stroke-width="1"/>
+    <!-- Year -->
+    <text x="0" y="60" text-anchor="middle" font-family="'Times New Roman', serif" font-size="16" fill="#A89880" letter-spacing="2">1975</text>
   </g>
-  <text x="220" y="142" font-size="130" font-family="Arial, sans-serif" font-weight="700" fill="#101010" letter-spacing="6">IGI</text>
+  <!-- Large IGI text -->
+  <text x="280" y="205" font-family="Arial, Helvetica, sans-serif" font-size="175" fill="#1A1A1A" letter-spacing="8" font-weight="700">IGI</text>
 </svg>
