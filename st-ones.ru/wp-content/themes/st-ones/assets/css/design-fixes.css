@@ -1652,9 +1652,16 @@ img[src*="/assets/img/home/decor-form.png"] {
     color: #B79A6B !important;
 }
 
-/* ===== To-Order section: wider banner image ===== */
+/* ===== To-Order section: fix layout ===== */
+body.home .to-order__inner {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    align-items: stretch;
+}
+
 body.home .to-order__banner {
-    width: 55%;
+    position: relative;
+    z-index: 1;
     min-height: 400px;
 }
 
@@ -1662,6 +1669,19 @@ body.home .to-order__banner img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
+}
+
+body.home .to-order__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 30px;
+}
+
+@media (max-width: 768px) {
+    body.home .to-order__inner {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Fix production section on about page */
