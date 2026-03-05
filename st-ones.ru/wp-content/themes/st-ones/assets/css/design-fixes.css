@@ -1713,6 +1713,84 @@ img[src*="/assets/img/home/decor-form.png"] {
     color: #B79A6B !important;
 }
 
+/* ===== To-Order section: yellow earrings redesign ===== */
+body.home .to-order {
+    background: var(--dm-navy);
+    border: 1px solid rgba(183, 154, 107, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+body.home .to-order__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+}
+
+body.home .to-order__banner {
+    position: relative !important;
+    z-index: 1 !important;
+    width: 45%;
+    height: auto !important;
+    flex-shrink: 0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+body.home .to-order__banner img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 450px;
+    object-fit: contain !important;
+}
+
+body.home .to-order__content {
+    padding: 60px 40px !important;
+    width: 55% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body.home .to-order__title {
+    color: var(--dm-gold) !important;
+}
+
+body.home .to-order__text {
+    width: 100% !important;
+    color: rgba(246, 240, 232, 0.8);
+}
+
+@media (max-width: 768px) {
+    body.home .to-order__inner {
+        flex-direction: column;
+    }
+
+    body.home .to-order__banner {
+        width: 100%;
+        padding: 20px;
+        max-height: 350px;
+    }
+
+    body.home .to-order__banner img {
+        max-height: 300px;
+    }
+
+    body.home .to-order__content {
+        width: 100% !important;
+        padding: 30px 20px !important;
+        text-align: center;
+    }
+
+    body.home .to-order__text {
+        margin: 0 auto;
+    }
+}
+
 /* Fix production section on about page */
 .production,
 .production__block-info,
